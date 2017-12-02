@@ -8,6 +8,7 @@ fun timeit(block: () -> Unit) {
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-	    timeit { day1.day1() }
+	    timeit { advent.day1() }
+	    timeit { advent.day2() }
     }
 }

@@ -78,4 +78,18 @@ class AdventTest {
         assertEquals(calcDivide("9 4 7 3"), 3)
         assertEquals(calcDivide("3 8 6 5"), 2)
     }
+
+    @Test
+    fun day3() {
+        /*
+        Data from square 1 is carried 0 steps, since it's at the access port.
+        Data from square 12 is carried 3 steps, such as: down, left, left.
+        Data from square 23 is carried only 2 steps: up twice.
+        Data from square 1024 must be carried 31 steps.
+        */
+        assertEquals(0, spiralDistance(1))
+        assertEquals(3, spiralDistance(12))
+        assertEquals(2, spiralDistance(23))
+        assertEquals(31, spiralDistance(1024))
+    }
 }

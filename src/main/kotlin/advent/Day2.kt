@@ -73,8 +73,8 @@ private val input = """
 3858	202	1141	3458	2507	239	199	4400	3713	3980	4170	227	3968	1688	4352	4168
 """
 
-fun List<Int>.combinations(): List<Pair<Int, Int>> {
-    val result = ArrayList<Pair<Int, Int>>()
+fun <T> List<T>.combinations(): List<Pair<T, T>> {
+    val result = ArrayList<Pair<T, T>>()
     forEachIndexed { index, i ->
         forEachIndexed { index2, j ->
             if (index != index2)

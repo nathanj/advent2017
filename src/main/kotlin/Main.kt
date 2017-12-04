@@ -10,6 +10,7 @@ object Main {
     fun main(args: Array<String>) {
 	    //timeit { advent.day1() }
 	    //timeit { advent.day2() }
-	    timeit { advent.day3() }
+	    //timeit { advent.day3() }
+        timeit { advent.day4() }
     }
 }

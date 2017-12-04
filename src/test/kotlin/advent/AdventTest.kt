@@ -92,4 +92,31 @@ class AdventTest {
         assertEquals(2, spiralDistance(23))
         assertEquals(31, spiralDistance(1024))
     }
+
+    @Test
+    fun day4() {
+        /*
+        aa bb cc dd ee is valid.
+        aa bb cc dd aa is not valid - the word aa appears more than once.
+        aa bb cc dd aaa is valid - aa and aaa count as different words.
+        */
+
+        assertTrue(isPassphraseValid("aa bb cc dd ee"))
+        assertFalse(isPassphraseValid("aa bb cc dd aa"))
+        assertTrue(isPassphraseValid("aa bb cc dd aaa"))
+
+        /*
+        abcde fghij is a valid passphrase.
+        abcde xyz ecdab is not valid - the letters from the third word can be rearranged to form the first word.
+        a ab abc abd abf abj is a valid passphrase, because all letters need to be used when forming another word.
+        iiii oiii ooii oooi oooo is valid.
+        oiii ioii iioi iiio is not valid - any of these words can be rearranged to form any other word.
+        */
+
+        assertTrue(isPassphraseValidPart2("abcde fghij"))
+        assertFalse(isPassphraseValidPart2("abcde xyz ecdab"))
+        assertTrue(isPassphraseValidPart2("a ab abc abd abf abj"))
+        assertTrue(isPassphraseValidPart2("iiii oiii ooii oooi oooo"))
+        assertFalse(isPassphraseValidPart2("oiii ioii iioi iiio"))
+    }
 }

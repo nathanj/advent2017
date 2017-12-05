@@ -119,4 +119,10 @@ class AdventTest {
         assertTrue(isPassphraseValidPart2("iiii oiii ooii oooi oooo"))
         assertFalse(isPassphraseValidPart2("oiii ioii iioi iiio"))
     }
+
+    @Test
+    fun day5() {
+        assertEquals(5, mazeSteps(intArrayOf(0, 3, 0, 1, -3)))
+        assertEquals(10, mazeSteps(intArrayOf(0, 3, 0, 1, -3), part=2))
+    }
 }

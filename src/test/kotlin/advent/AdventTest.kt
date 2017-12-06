@@ -125,4 +125,10 @@ class AdventTest {
         assertEquals(5, mazeSteps(intArrayOf(0, 3, 0, 1, -3)))
         assertEquals(10, mazeSteps(intArrayOf(0, 3, 0, 1, -3), part=2))
     }
+
+    @Test
+    fun day6() {
+        assertEquals(5, memCycles(intArrayOf(0, 2, 7, 0)))
+        assertEquals(4, memCycles(intArrayOf(0, 2, 7, 0), part=2))
+    }
 }

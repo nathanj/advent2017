@@ -14,5 +14,6 @@ object Main {
         timeit { advent.day4() }
         timeit { advent.day5() }
         timeit { advent.day6() }
+        timeit { advent.day7() }
     }
 }

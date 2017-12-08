@@ -131,4 +131,16 @@ class AdventTest {
         assertEquals(5, memCycles(intArrayOf(0, 2, 7, 0)))
         assertEquals(4, memCycles(intArrayOf(0, 2, 7, 0), part=2))
     }
+
+    @Test
+    fun day8() {
+        val lines = """b inc 5 if a > 1
+a inc 1 if b < 5
+c dec -10 if a >= 1
+c inc -20 if c == 10""".lines()
+        val registers = HashMap<String, Int>()
+        val maxEver = runCommands(registers, lines)
+        assertEquals(1, registers.maxBy { it.value }!!.value)
+        assertEquals(10, maxEver)
+    }
 }

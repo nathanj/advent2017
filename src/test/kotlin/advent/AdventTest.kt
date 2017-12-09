@@ -143,4 +143,36 @@ c inc -20 if c == 10""".lines()
         assertEquals(1, registers.maxBy { it.value }!!.value)
         assertEquals(10, maxEver)
     }
+
+    @Test
+    fun day9() {
+	    val tests = mapOf(
+			    "{}" to 1,
+			    "{{{}}}" to 6,
+			    "{{},{}}" to 5,
+			    "{{{},{},{{}}}}" to 16,
+			    "{<a>,<a>,<a>,<a>}" to 1,
+			    "{{<ab>},{<ab>},{<ab>},{<ab>}}" to 9,
+			    "{{<!!>},{<!!>},{<!!>},{<!!>}}" to 9,
+			    "{{<a!>},{<a!>},{<a!>},{<ab>}}" to 3
+			    )
+
+	tests.forEach { str, exp ->
+	assertEquals(exp, scoreStream(str).first)
+	}
+
+	val tests2 = mapOf(
+	"<>" to 0,
+"<random characters>" to 17,
+"<<<<>" to 3,
+"<{!>}>" to  2,
+"<!!>" to 0,
+"<!!!>>" to 0,
+"<{o\"i!a,<{i<a>" to 10
+	)
+
+	tests2.forEach { str, exp ->
+	assertEquals(exp, scoreStream(str).second)
+	}
+    }
 }

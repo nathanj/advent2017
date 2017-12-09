@@ -8,13 +8,14 @@ fun timeit(block: () -> Unit) {
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        timeit { advent.day1() }
-        timeit { advent.day2() }
-        timeit { advent.day3() }
-        timeit { advent.day4() }
-        timeit { advent.day5() }
-        timeit { advent.day6() }
-        timeit { advent.day7() }
-        timeit { advent.day8() }
+        //timeit { advent.day1() }
+        //timeit { advent.day2() }
+        //timeit { advent.day3() }
+        //timeit { advent.day4() }
+        //timeit { advent.day5() }
+        //timeit { advent.day6() }
+        //timeit { advent.day7() }
+        //timeit { advent.day8() }
+        timeit { advent.day9() }
     }
 }

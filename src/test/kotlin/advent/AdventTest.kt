@@ -16,8 +16,7 @@ class AdventTest {
     }
 
     @Test
-    fun findMatchingDigits() {
-
+    fun day1() {
         /*
         1122 produces a sum of 3 (1 + 2) because the first digit (1) matches the second digit and the third digit (2) matches the fourth digit.
         1111 produces 4 because each digit (all 1) matches the next.
@@ -32,10 +31,7 @@ class AdventTest {
         assertEquals(getCaptchaSolution("1234"), 0)
         assertEquals(findMatchingDigits("91212129"), listOf(9))
         assertEquals(getCaptchaSolution("91212129"), 9)
-    }
 
-    @Test
-    fun findMatchingDigitsPart2() {
         /*
         1212 produces 6: the list contains 4 items, and all four digits match the digit 2 items ahead.
         1221 produces 0, because every comparison is between a 1 and a 2.
@@ -123,13 +119,13 @@ class AdventTest {
     @Test
     fun day5() {
         assertEquals(5, mazeSteps(intArrayOf(0, 3, 0, 1, -3)))
-        assertEquals(10, mazeSteps(intArrayOf(0, 3, 0, 1, -3), part=2))
+        assertEquals(10, mazeSteps(intArrayOf(0, 3, 0, 1, -3), part = 2))
     }
 
     @Test
     fun day6() {
         assertEquals(5, memCycles(intArrayOf(0, 2, 7, 0)))
-        assertEquals(4, memCycles(intArrayOf(0, 2, 7, 0), part=2))
+        assertEquals(4, memCycles(intArrayOf(0, 2, 7, 0), part = 2))
     }
 
     @Test
@@ -146,53 +142,52 @@ c inc -20 if c == 10""".lines()
 
     @Test
     fun day9() {
-	    val tests = mapOf(
-			    "{}" to 1,
-			    "{{{}}}" to 6,
-			    "{{},{}}" to 5,
-			    "{{{},{},{{}}}}" to 16,
-			    "{<a>,<a>,<a>,<a>}" to 1,
-			    "{{<ab>},{<ab>},{<ab>},{<ab>}}" to 9,
-			    "{{<!!>},{<!!>},{<!!>},{<!!>}}" to 9,
-			    "{{<a!>},{<a!>},{<a!>},{<ab>}}" to 3
-			    )
+        val tests = mapOf(
+                "{}" to 1,
+                "{{{}}}" to 6,
+                "{{},{}}" to 5,
+                "{{{},{},{{}}}}" to 16,
+                "{<a>,<a>,<a>,<a>}" to 1,
+                "{{<ab>},{<ab>},{<ab>},{<ab>}}" to 9,
+                "{{<!!>},{<!!>},{<!!>},{<!!>}}" to 9,
+                "{{<a!>},{<a!>},{<a!>},{<ab>}}" to 3
+        )
 
-	tests.forEach { str, exp ->
-	assertEquals(exp, scoreStream(str).first)
-	}
+        tests.forEach { str, exp ->
+            assertEquals(exp, scoreStream(str).first)
+        }
 
-	val tests2 = mapOf(
-	"<>" to 0,
-"<random characters>" to 17,
-"<<<<>" to 3,
-"<{!>}>" to  2,
-"<!!>" to 0,
-"<!!!>>" to 0,
-"<{o\"i!a,<{i<a>" to 10
-	)
+        val tests2 = mapOf(
+                "<>" to 0,
+                "<random characters>" to 17,
+                "<<<<>" to 3,
+                "<{!>}>" to 2,
+                "<!!>" to 0,
+                "<!!!>>" to 0,
+                "<{o\"i!a,<{i<a>" to 10
+        )
 
-	tests2.forEach { str, exp ->
-	assertEquals(exp, scoreStream(str).second)
-	}
+        tests2.forEach { str, exp ->
+            assertEquals(exp, scoreStream(str).second)
+        }
     }
 
     @Test
     fun day10() {
-    val list = (0..4).map { it }.toMutableList()
-    val lengths = listOf(3,4,1,5)
-    assertEquals(12, knotHash(list, lengths))
+        val list = (0..4).map { it }.toMutableList()
+        val lengths = listOf(3, 4, 1, 5)
+        assertEquals(12, knotHash(list, lengths))
 
-val tests = mapOf(
-"" to "a2582a3a0e66e6e86e3812dcb672a272",
-"AoC 2017" to "33efeb34ea91902bb2f59c9920caa6cd",
-"1,2,3" to "3efbe78a8d82f29979031a4aa0b16a9d",
-"1,2,4" to "63960835bcdc130f0b66d7ff4f6a5a8e"
-)
+        val tests = mapOf(
+                "" to "a2582a3a0e66e6e86e3812dcb672a272",
+                "AoC 2017" to "33efeb34ea91902bb2f59c9920caa6cd",
+                "1,2,3" to "3efbe78a8d82f29979031a4aa0b16a9d",
+                "1,2,4" to "63960835bcdc130f0b66d7ff4f6a5a8e"
+        )
 
-tests.forEach { str, exp ->
-assertEquals(exp, fullKnotHash(str))
-}
-
+        tests.forEach { str, exp ->
+            assertEquals(exp, fullKnotHash(str))
+        }
     }
 
     @Test

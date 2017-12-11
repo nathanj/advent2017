@@ -194,4 +194,18 @@ assertEquals(exp, fullKnotHash(str))
 }
 
     }
+
+    @Test
+    fun day11() {
+        val tests = mapOf(
+                "ne,ne,ne" to 3,
+                "ne,ne,sw,sw" to 0,
+                "ne,ne,s,s" to 2,
+                "se,sw,se,sw,sw" to 3
+        )
+
+        for ((str, exp) in tests) {
+            assertEquals(exp, findHexDistance(str).first)
+        }
+    }
 }

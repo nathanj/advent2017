@@ -203,4 +203,18 @@ c inc -20 if c == 10""".lines()
             assertEquals(exp, findHexDistance(str).first)
         }
     }
+
+    @Test
+    fun day12() {
+        val lines = """0 <-> 2
+1 <-> 1
+2 <-> 0, 3, 4
+3 <-> 2, 4
+4 <-> 2, 3, 6
+5 <-> 6
+6 <-> 4, 5""".lines()
+        val graph = buildPlumberGraph(lines)
+        assertEquals(6, programsConnected(graph, "0").size)
+        assertEquals(2, findProgramGroups(graph).size)
+    }
 }

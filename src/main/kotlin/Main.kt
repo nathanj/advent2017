@@ -18,6 +18,7 @@ object Main {
         //timeit { advent.day8() }
         //timeit { advent.day9() }
         //timeit { advent.day10() }
-        timeit { advent.day11() }
+        //timeit { advent.day11() }
+        timeit { advent.day12() }
     }
 }

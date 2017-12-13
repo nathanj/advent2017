@@ -217,4 +217,14 @@ c inc -20 if c == 10""".lines()
         assertEquals(6, programsConnected(graph, "0").size)
         assertEquals(2, findProgramGroups(graph).size)
     }
+
+    @Test
+    fun day13() {
+        val lines = """0: 3
+1: 2
+4: 4
+6: 4""".lines()
+        assertEquals(24, ridePacket(parseFirewall(lines)).second)
+        assertEquals(10, delayPacket(lines))
+    }
 }

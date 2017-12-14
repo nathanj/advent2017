@@ -227,4 +227,11 @@ c inc -20 if c == 10""".lines()
         assertEquals(24, ridePacket(parseFirewall(lines)).second)
         assertEquals(10, delayPacket(lines))
     }
+
+    @Test
+    fun day14() {
+        val input = "flqrgnkx"
+        assertEquals(8108, knotSquaresCount(input))
+        assertEquals(1242, knotSquaresRegionsCount(input))
+    }
 }

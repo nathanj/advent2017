@@ -21,6 +21,7 @@ object Main {
         //timeit { advent.day11() }
         //timeit { advent.day12() }
         //timeit { advent.day13() }
-        timeit { advent.day14() }
+        //timeit { advent.day14() }
+        timeit { advent.day15() }
     }
 }

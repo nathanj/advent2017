@@ -234,4 +234,14 @@ c inc -20 if c == 10""".lines()
         assertEquals(8108, knotSquaresCount(input))
         assertEquals(1242, knotSquaresRegionsCount(input))
     }
+
+    @Test
+    fun day15() {
+        val a = seqA(65)
+        val b = seqB(8921)
+        assertEquals(588, findMatchingPairs(a, b))
+        val a2 = seqA2(65)
+        val b2 = seqB2(8921)
+        assertEquals(309, findMatchingPairs2(a2, b2))
+    }
 }

@@ -244,4 +244,13 @@ c inc -20 if c == 10""".lines()
         val b2 = seqB2(8921)
         assertEquals(309, findMatchingPairs2(a2, b2))
     }
+
+    @Test
+    fun day16() {
+        val programs = "abcde"
+        val lines = """s1
+x3/4
+pe/b""".lines()
+        assertEquals("baedc", dance(programs, lines))
+    }
 }

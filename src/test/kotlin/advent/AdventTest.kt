@@ -258,4 +258,19 @@ pe/b""".lines()
     fun day17() {
         assertEquals(638, spinlock(3))
     }
+
+    @Test
+    fun day18() {
+        val lines = """set a 1
+add a 2
+mul a a
+mod a 5
+snd a
+set a 0
+rcv a
+jgz a -1
+set a 1
+jgz a -2""".lines()
+        assertEquals(4, duet(lines))
+    }
 }

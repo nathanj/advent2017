@@ -253,4 +253,9 @@ x3/4
 pe/b""".lines()
         assertEquals("baedc", dance(programs, lines))
     }
+
+    @Test
+    fun day17() {
+        assertEquals(638, spinlock(3))
+    }
 }

@@ -273,4 +273,18 @@ set a 1
 jgz a -2""".lines()
         assertEquals(4, duet(lines))
     }
+
+    @Test
+    fun day19() {
+        val input = """
+        |
+        |  +--+
+        A  |  C
+    F---|----E|--+
+        |  |  |  D
+        +B-+  +--+"""
+        val grid = makeDiagram(input)
+        //printDiagram(grid)
+        assertEquals(Pair("ABCDEF", 38), runDiagram(grid))
+    }
 }

@@ -287,4 +287,19 @@ jgz a -2""".lines()
         //printDiagram(grid)
         assertEquals(Pair("ABCDEF", 38), runDiagram(grid))
     }
+
+    @Test
+    fun day20() {
+        val lines = """p=< 3,0,0>, v=< 2,0,0>, a=<-1,0,0>
+p=< 4,0,0>, v=< 0,0,0>, a=<-2,0,0>""".lines()
+        val particles = parseParticles(lines)
+        assertEquals(0, adjustParticles(particles))
+
+        val lines2 = """p=<-6,0,0>, v=< 3,0,0>, a=< 0,0,0>
+p=<-4,0,0>, v=< 2,0,0>, a=< 0,0,0>
+p=<-2,0,0>, v=< 1,0,0>, a=< 0,0,0>
+p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
+        val particles2 = parseParticles(lines2)
+        assertEquals(1, adjustParticlesCollision(particles2))
+    }
 }

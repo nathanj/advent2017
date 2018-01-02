@@ -302,4 +302,20 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
         val particles2 = parseParticles(lines2)
         assertEquals(1, adjustParticlesCollision(particles2))
     }
+
+    @Test
+    fun day22() {
+        val input = """
+            |..#
+            |#..
+            |...
+            """.trimMargin()
+        val grid = parseVirusGraph(input)
+        assertEquals(5, runVirusGraph(grid, 7))
+        assertEquals(41, runVirusGraph(grid, 70))
+        assertEquals(5587, runVirusGraph(grid, 10_000))
+        assertEquals(26, runVirusGraph2(grid, 100))
+        assertEquals(2511944, runVirusGraph2(grid, 10_000_000))
+    }
+
 }

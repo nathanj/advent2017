@@ -318,4 +318,21 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
         assertEquals(2511944, runVirusGraph2(grid, 10_000_000))
     }
 
+    @Test
+    fun day24() {
+        val components = """
+            |0/2
+            |2/2
+            |2/3
+            |3/4
+            |3/5
+            |0/1
+            |10/1
+            |9/10
+            """.trimMargin().lines().map { parseComponent(it) }
+        val bridges = makeAllBridges(components)
+        assertEquals(31, findStrongestBridge(bridges)?.strength)
+        assertEquals(19, findStrongestBridge(bridges, part = 2)?.strength)
+    }
+
 }

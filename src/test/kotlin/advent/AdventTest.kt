@@ -335,4 +335,15 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
         assertEquals(19, findStrongestBridge(bridges, part = 2)?.strength)
     }
 
+    @Test
+    fun day25() {
+        val input = """
+            |A
+            |6
+            |A -> 1RB, 0LB
+            |B -> 1LA, 1RA
+            """.trimMargin()
+        val blueprint = parseTuringBlueprint(input)
+        assertEquals(3, runTuringBlueprint(blueprint))
+    }
 }

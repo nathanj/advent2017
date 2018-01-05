@@ -30,6 +30,7 @@ object Main {
         //timeit { advent.day20() }
         //timeit { advent.day22() }
         //timeit { advent.day23() }
-        timeit { advent.day24() }
+        //timeit { advent.day24() }
+        timeit { advent.day25() }
     }
 }

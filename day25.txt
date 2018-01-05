@@ -1,0 +1,8 @@
+A
+12683008
+A -> 1RB, 0LB
+B -> 1LC, 0RE
+C -> 1RE, 0LD
+D -> 1LA, 1LA
+E -> 0RA, 0RF
+F -> 1RE, 1RA

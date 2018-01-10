@@ -304,6 +304,15 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
     }
 
     @Test
+    fun day21() {
+        val start = ".#./..#/###"
+        val lines = """../.# => ##./#../...
+.#./..#/### => #..#/..../..../#..#""".lines()
+        val rules = parseRules(lines)
+        assertEquals("abc", fractalLoop(start, rules))
+    }
+
+    @Test
     fun day22() {
         val input = """
             |..#
@@ -346,4 +355,5 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
         val blueprint = parseTuringBlueprint(input)
         assertEquals(3, runTuringBlueprint(blueprint))
     }
+
 }

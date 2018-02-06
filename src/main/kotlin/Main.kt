@@ -8,29 +8,30 @@ fun timeit(block: () -> Unit) {
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        //timeit { advent.day1() }
-        //timeit { advent.day2() }
-        //timeit { advent.day3() }
-        //timeit { advent.day4() }
-        //timeit { advent.day5() }
-        //timeit { advent.day6() }
-        //timeit { advent.day7() }
-        //timeit { advent.day8() }
-        //timeit { advent.day9() }
-        //timeit { advent.day10() }
-        //timeit { advent.day11() }
-        //timeit { advent.day12() }
-        //timeit { advent.day13() }
-        //timeit { advent.day14() }
-        //timeit { advent.day15() }
-        //timeit { advent.day16() }
-        //timeit { advent.day17() }
-        //timeit { advent.day18() }
-        //timeit { advent.day19() }
-        //timeit { advent.day20() }
-        //timeit { advent.day22() }
-        //timeit { advent.day23() }
-        //timeit { advent.day24() }
+        timeit { advent.day1() }
+        timeit { advent.day2() }
+        timeit { advent.day3() }
+        timeit { advent.day4() }
+        timeit { advent.day5() }
+        timeit { advent.day6() }
+        timeit { advent.day7() }
+        timeit { advent.day8() }
+        timeit { advent.day9() }
+        timeit { advent.day10() }
+        timeit { advent.day11() }
+        timeit { advent.day12() }
+        timeit { advent.day13() }
+        timeit { advent.day14() }
+        timeit { advent.day15() }
+        timeit { advent.day16() }
+        timeit { advent.day17() }
+        timeit { advent.day18() }
+        timeit { advent.day19() }
+        timeit { advent.day20() }
+        timeit { advent.day21() }
+        timeit { advent.day22() }
+        timeit { advent.day23() }
+        timeit { advent.day24() }
         timeit { advent.day25() }
     }
 }

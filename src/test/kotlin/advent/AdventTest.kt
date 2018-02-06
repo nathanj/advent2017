@@ -309,7 +309,11 @@ p=< 3,0,0>, v=<-1,0,0>, a=< 0,0,0>""".lines()
         val lines = """../.# => ##./#../...
 .#./..#/### => #..#/..../..../#..#""".lines()
         val rules = parseRules(lines)
-        assertEquals("abc", fractalLoop(start, rules))
+        val step1 = fractalLoop(start, rules)
+        assertEquals("#..#/..../..../#..#", step1)
+        val step2 = fractalLoop(step1, rules)
+        assertEquals("##.##./#..#../....../##.##./#..#../......", step2)
+        assertEquals(12, countPixels(step2))
     }
 
     @Test
